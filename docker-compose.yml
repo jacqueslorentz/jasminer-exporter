@@ -1,0 +1,11 @@
+version: '3'
+
+services:
+  jasminer-exporter:
+    build: .
+    container_name: jasminer-exporter
+    ports:
+      - 5896:5896
+    restart: unless-stopped
+    command:
+      - '--jasminer-uri=http://192.168.1.10'
